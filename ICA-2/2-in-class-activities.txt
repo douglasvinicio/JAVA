@@ -1,0 +1,67 @@
+In-Class Activities - Class 2
+
+ICA-2-1
+-------
+a. num1 = 35; // valid
+b. newNum = num1 – num2; // Invalid -> Use of illegal character en dash.
+c. num1 = 5; num2 = 2 + num1; num1 = num2 / 3; // Valid -> Result is 2.
+d. num1 * num2 = newNum; // Invalid -> newNum variable must be declared before the operation. Ex: newNum = num1 * num2;
+e. x = 12 * num1 - 15.3; // Valid -> If variable num1 is declared.
+f. num1 * 2 = newNum + num2; // Invalid -> Variable declared with operation. It should be declared and slip in two. Ex : num1 = num1 * 2; newNum = newNum + num2;
+g. x / y = x * y; -> Invalid -> Variable declared as an operator.
+h. num2 = num1 % 2.0; Invalid -> Variable num2 has a conflict of types. Int cannot be part of the operation if not a double type or being casted to a implicit number type.
+i. newNum = (int) (x) % 5; - Valid -> If Variable x is defined.
+
+ICA-2-2
+---------
+// Declare int variables x and y.
+int x = 50;
+int y = 30;
+System.out.println("The value of x is: " + x);
+System.out.println("The value of y is: " + y);
+// Initialize an int variable x to 10 and a char variable ch to 'B'.
+x = 10;
+char char1 = 'B';
+System.out.println("The new value of x is: " + x);
+System.out.println("The value attributed to char1 is: " + char1);
+// Update the value of an int variable x by adding 5 to it.
+x = x + 5;
+System.out.println("The new value of x is: " + x);
+// Declare and initialize a double variable payRate to 12.50.
+double payRate = 12.5;
+System.out.println("The payrate is: " + payRate);
+// Copy the value of an int variable firstNum into an int variable tempNum.
+int firstNum = 10;
+int tempNum = firstNum;
+System.out.println("The value of both variables firstNum and tempNum is: " + tempNum);
+// Swap the contents of the int variables x and y. (Declare additional variables, if necessary.)
+x = y;
+y = x;
+System.out.println("The new value of x is: " + x);
+System.out.println("The new value of y is: " + y);
+// Suppose x and y are double variables. Output the contents of x, y, and the expression x + 12 / y – 18.
+double x_Double = x;
+double y_Double = y;
+double expression = x_Double + 12 / y_Double - 18;
+System.out.println(expression);
+// Declare a char variable grade and set the value of grade to 'A'.
+char grade = 'A';
+System.out.println("The value of the variable grade is: " + grade);
+// Declare int variables to store four integers.
+int num1, num2, num3, num4;
+// Copy the value of a double variable z to the nearest integer into an int variable x.
+double z = 13.9;
+int new_x = (int)z;
+System.out.println("The old value is "+ z + "and the new value is " + new_x);
+        
+
+ICA-2-3
+---------
+Suppose x, y, and z are int variables and w and t are double variables.
+What is the value of each variable after the last statement executes?
+x = 17;
+y = 15;
+x = x + y / 4; -> x = 15/4 = 3.0 -> x = 3 + 17 -> // x = 20
+z = x % 3 + 4; -> z = 20%3 = 2 + 4 -> // z = 6
+w = 17 / 3 + 6.5; -> 17 / 3 = 5.0 w = 6.5 + 5.0 -> // w = 11.5
+t = x / 4.0 + 15 % 4 - 3.5; t = 20 / 4 + 3 - 3.5 -> t = 5.0 + 3 - 3.5 -> t = 8 - 3.5 -> // t = 4.5

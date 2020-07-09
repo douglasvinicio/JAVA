@@ -1,0 +1,98 @@
+ICA-1
+--------
+Consider the statements:
+double x = 75.3987;
+double y = 982.89764;
+
+What is the output of the following statements?
+a. System.out.printf("%.2f %n", x); Answer : 75.40
+b. System.out.printf("%.2f %n", y); Answer : 982.90
+c. System.out.printf("%.3f %n", x); Answer : 75.399
+d. System.out.printf("%.3f %n", y); Answer : 982.898
+
+ICA-2
+--------
+Suppose that infile is a Scanner object associated with the file that
+contains the following data: 27306 savings 7503.35. Write the Java
+statements that read and store the first input in the int variable acctNumber,
+the second input in the String variable accountType, and the third
+input in the double variable balance.
+
+Answer :
+
+*Scanner infile = new Scanner(new FileReader("inData.txt"));
+*PrintWriter outFile = new PrintWriter("outData.txt");
+
+*int acctNumber;
+*String accountType;
+*double balance;
+
+*acctNumber = infile.nextInt();
+*accountType = infile.next();
+*balance = infile.nextDouble();
+
+*outFile.println("The account number is " + acctNumber + " the account type is " + accountType + " and the balance is " + balance);
+
+ICA-3
+--------
+Three employees in a company are up for a special pay increase. You are
+given a file, say inData.txt, with the following data:
+
+Miller Andrew 65789.87 5
+Green Sheila 75892.56 6
+Sethi Amit 74900.50 6.1
+
+Each input line consists of an employee’s last name, first name, current salary,
+and percent pay increase. For example, in the first input line, the last name of
+the employee is Miller, the first name is Andrew, the current salary is
+65789.87, and the pay increase is 5%. Write a program that reads data from
+the specified file and stores the output in the file outData.txt. For
+each employee, the data must be output in the following form: firstName
+lastName updatedSalary. Format the output of decimal numbers to two
+decimal places.
+
+Answer : 
+
+/*
+Author : Douglas Vinicio
+Date : July 6,2020
+Purpose : Read data from a file, format and write the formatted data in a new file.
+ */
+
+// Importing Packages 
+import java.io.FileNotFoundException; 
+import java.io.FileReader;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class ica_w2 {
+    public static void main(String[] args) throws FileNotFoundException {
+        /* Creating Scanner and PrintWriter */
+        String desktop = System.getProperty("user.home") + "/Desktop/"; // Getting Desktop Path in MAC OS.
+        Scanner inFile = new Scanner(new FileReader(desktop + "inData.txt")); // Reading file inData.txt
+        PrintWriter outFile = new PrintWriter(desktop + "outData.txt"); // Creating file ourData.txt
+
+        /* Assigning Variables */
+        String firstName, lastName; // Assigning First and Last name as a String;
+        double currentSalary; // Current Salary assigned as double;
+        double percentagePayIncrease; // Percentage increase of the salary assigned as double;
+
+        /* While loop to read every line of the file */
+        while (inFile.hasNext()) {
+            firstName = inFile.next();
+            lastName = inFile.next();
+            currentSalary = inFile.nextDouble();
+            percentagePayIncrease = inFile.nextDouble();
+
+            /* Write formatted data into new file "outData.txt */
+            outFile.printf("The last name of the employee is " + lastName +
+                            ", the first name is " + firstName +
+                            ", the current salary is $%,.2f, and the pay increase is %.1f%%" + ". \n",
+                            currentSalary, percentagePayIncrease);
+        }
+        
+        inFile.close(); // Closing inFile
+        outFile.close(); // Closing outFile
+
+    }
+}

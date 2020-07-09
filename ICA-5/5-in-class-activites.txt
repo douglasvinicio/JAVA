@@ -1,0 +1,26 @@
+In-Class Activities - Class 5
+
+ICA-1
+--------
+if (sales >= 20000){
+            bonus = 0.10;
+        }
+
+        if ( sales >= 10000 && sales <=19999 ) {
+            bonus = 0.05;
+        }
+
+        else {
+            bonus = 0;
+        }
+
+        System.out.println(bonus);
+
+ICA-2
+--------
+File : ShippingCookies.java
+
+ICA-3
+--------
+File : BodyFatCalculator.java
+

@@ -1,0 +1,103 @@
+In-Class Activities - Class 3
+
+
+ICA-3-1
+----------
+Write Java statements that accomplish the following.
+a. Declare int variables x and y.
+b. Initialize an int variable x to 10 and a char variable ch to 'B'.
+c. Update the value of an int variable x by adding 5 to it.
+d. Declare and initialize a double variable payRate to 12.50.
+e. Copy the value of an int variable firstNum into an int variable tempNum.
+f. Swap the contents of the int variables x and y. (Declare additional variables, if necessary.)
+g. Suppose x and y are double variables. Output the contents of x, y, and the expression x + 12 / y – 18.
+h. Declare a char variable grade and set the value of grade to 'A'.
+i. Declare int variables to store four integers.
+j. Copy the value of a double variable z to the nearest integer into an int variable x.
+
+Same as ICA-2-2
+
+ICA-3-2
+----------
+Write each of the following as a Java expression.
+a. 32 times a plus b -> c = 32 * (a + b);
+b. The character that represents 8  -> char eight = '8';
+c. The string that represents the name Julie Nelson. -> String fullName = "Julie Nelson";
+d. (b2 - 4ac) / 2a -> delta = Math.pow(b, 2.0) - 4*a*c;
+e. (a + b)/c(ef)-gh -> formula = (a + b) / (c * (e * f) - g * h);
+f. (-b + (b2 - 4ac)) / 2a -> formula = ( -b + Math.sqrt(Math.pow(b , 2.0) - 4*a*c)) / (2.0 * a);
+
+
+ICA-3-3
+----------
+Give meaningful identifiers for the following variables:
+a. A variable to store the first name of a student. -> String studentFirstName;
+b. A variable to store the discounted price of an item. -> double itemDiscountPrice; 
+c. A variable to store the number of juice bottles. -> int juiceBottlesQuantity;
+d. A variable to store the number of miles traveled. - > double milesTraveled;
+e. A variable to store the highest test score. -> double testHighestScore;
+
+ICA-3-4
+----------
+Write Java statements to do the following:
+a. Declare int variable num1 and num2.
+b. Prompt the user to input two numbers.
+c. Input the first number in num1 and the second number in num2.
+d. Output num1, num2, and 2 times num1 minus num2. Your output must
+identify each number and the expression.
+
+Answer : 
+
+int num1,num2;
+Scanner input = new Scanner(System.in); // Creating the Scanner Object.
+System.out.println("Insert two numbers: ");
+num1 = input.nextInt(); // Reading user input for num1.
+num2 = input.nextInt(); // Reading user input for num2.
+System.out.println("The first number is :" + num1);
+System.out.println("The second number is :" + num2);
+System.out.println("The result of the expression 2." + num1 + "-" + num2 + " is : " + (2 * num1 - num2));
+
+ICA-3-5
+----------
+Write a program that does the following:
+a. Prompts the user to input five decimal numbers
+b. Prints the five decimal numbers
+c. Converts each decimal number to the nearest integer
+d. Adds the five integers
+e. Prints the sum and average of the five integers
+
+Answer : 
+double num1,num2,num3,num4,num5;
+Scanner input = new Scanner(System.in); // Creating the Scanner Object.
+System.out.println("Insert the first value: ");
+num1 = input.nextInt(); // Reading user input for num1.
+System.out.println("Insert the second value: ");
+num2 = input.nextInt(); // Reading user input for num2.
+System.out.println("Insert the third value: ");
+num3 = input.nextInt(); // Reading user input for num3.
+System.out.println("Insert the fourth value: ");
+num4 = input.nextInt(); // Reading user input for num4.
+System.out.println("Insert the fifth value: ");
+num5 = input.nextInt(); // Reading user input for num5.
+System.out.println("The first number is :" + num1);
+System.out.println("The second number is :" + num2);
+System.out.println("The third number is :" + num3);
+System.out.println("The fourth number is :" + num4);
+System.out.println("The fifth number is :" + num5);
+// Converting doubles into the nearest Integers.
+int int_num1 = (int) Math.round(num1);
+int int_num2 = (int) Math.round(num2);
+int int_num3 = (int) Math.round(num3);
+int int_num4 = (int) Math.round(num4);
+int int_num5 = (int) Math.round(num5);
+System.out.println("Those are the values converted to the nearest integers: ");
+System.out.println("1 - First Value = " + int_num1);
+System.out.println("2 - Second Value = " + int_num2);
+System.out.println("3 - Third Value = " + int_num3);
+System.out.println("4 - Fourth Value = " + int_num4);
+System.out.println("5 - Fifth Value = " + int_num5);
+// Creating Variables to store the sum and average of the values.
+int sum = int_num1 + int_num2 + int_num3 + int_num4 + int_num5;
+int average = sum / 5;
+System.out.println("The total sum of the five values is : " + (sum)); // Printing the Sum of all values.
+System.out.println("The average of the five values is : " + (average)); // Printing the Average of the values.

@@ -1,0 +1,3 @@
+The last name of the employee is Andrew, the first name is Miller, the current salary is $65,789.87, and the pay increase is 5.0%. 
+The last name of the employee is Sheila, the first name is Green, the current salary is $75,892.56, and the pay increase is 6.0%. 
+The last name of the employee is Amit, the first name is Sethi, the current salary is $74,900.50, and the pay increase is 6.1%. 
