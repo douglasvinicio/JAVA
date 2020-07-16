@@ -1,0 +1,10 @@
+John 100
+Jane 97
+Mark 30
+Kevin 176
+Albert 134
+Jeena 300
+July 43
+Andre 120
+Nick 325
+Kim 101
